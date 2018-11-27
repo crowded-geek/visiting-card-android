@@ -1,4 +1,4 @@
-package com.community.jboss.visitingcard.Networking;
+package com.community.jboss.visitingcard.networking;
 
 public class NetworkUtils {
 
