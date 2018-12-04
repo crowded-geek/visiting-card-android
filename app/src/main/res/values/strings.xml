@@ -3,5 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="slider_button_text">Let\'s Go</string>
 
 </resources>
