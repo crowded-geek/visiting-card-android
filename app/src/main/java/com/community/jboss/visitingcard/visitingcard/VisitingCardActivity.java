@@ -1,6 +1,7 @@
 package com.community.jboss.visitingcard.visitingcard;
 
 import android.content.Intent;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,17 +10,28 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import com.community.jboss.visitingcard.R;
 import com.community.jboss.visitingcard.SettingsActivity;
 import com.community.jboss.visitingcard.maps.MapsActivity;
+import java.io.IOException;
+import siclo.com.ezphotopicker.api.EZPhotoPick;
+import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
+import siclo.com.ezphotopicker.api.models.EZPhotoPickConfig;
+import siclo.com.ezphotopicker.api.models.PhotoSource;
+import android.widget.ImageButton;
 
 public class VisitingCardActivity extends AppCompatActivity {
+
+    private ImageButton profile_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.visiting_card);
+
+	profile_img=findViewById(R.id.profile_img);
 
         // TODO: Add a ImageView and a number of EditText to get his/her Visiting Card details (Currently authenticated User)
 
@@ -47,6 +59,24 @@ public class VisitingCardActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+
+        if (requestCode == EZPhotoPick.PHOTO_PICK_GALLERY_REQUEST_CODE || requestCode == EZPhotoPick.PHOTO_PICK_CAMERA_REQUEST_CODE) {
+            Bitmap pickedPhoto = null;
+            try {
+                pickedPhoto = new EZPhotoPickStorage(this).loadLatestStoredPhotoBitmap();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            profile_img.setImageBitmap(pickedPhoto);
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_login, menu);
@@ -63,5 +93,29 @@ public class VisitingCardActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    
+    public void select_img(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Select image source")
+                .setCancelable(false)
+                .setPositiveButton("Gallery", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        EZPhotoPickConfig config = new EZPhotoPickConfig();
+                        config.photoSource = PhotoSource.GALLERY; // or PhotoSource.CAMERA
+                        config.isAllowMultipleSelect = false; // only for GALLERY pick and API >18
+                        EZPhotoPick.startPhotoPickActivity(VisitingCardActivity.this, config);
+                    }
+                })
+                .setNegativeButton("Camera", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        EZPhotoPickConfig config = new EZPhotoPickConfig();
+                        config.photoSource = PhotoSource.CAMERA; // or PhotoSource.CAMERA
+                        config.isAllowMultipleSelect = false; // only for GALLERY pick and API >18
+                        EZPhotoPick.startPhotoPickActivity(VisitingCardActivity.this, config);
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
