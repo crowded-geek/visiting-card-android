@@ -9,12 +9,12 @@ An Android application that helps to virtually exchange digital visiting cards w
 
 ## Work-Flow
 - A Splash Screen that Displays the app icon everytime that app is launched.<br>
-- A Quick Walkthrough(Slider) of the Visiting Card Android App when the App is launched for the first time.<br>
+- A Quick Walkthrough (Slider) of the Visiting Card Android App when the App is launched for the first time.<br>
 - A Login Activity to ensure only Authentic Users use the app - Implemented using Firebase Authentication.<br>
-- A Visiting Card Activity that lets the Currently authenticated user to create his/her own visiting card by entering their own Information.<br>
-- A Google Maps activity that helps you spot your current location and also helps you drop your own visiting card in the current location.<br>
-- A bottom Sheet in the same Maps Activity that gives you all the dropped Visiting card within a 500m to 1km radius.<br>
-- Clicking on a particular Visiting card reveals all the Information present in that card.
+- A Visiting Card Activity that lets the Currently Authenticated User to create his/her own visiting card by entering their own Information.<br>
+- A Google Maps activity that helps you spot your current location and also helps you drop your own visiting card at the current location.<br>
+- A Bottom Sheet in the same Maps Activity that gives you all of the dropped Visiting cards within a 500m to 1km radius.<br>
+- Clicking on a particular Visiting Card reveals all the Information present in that card.
 - One can also save the Card to their very own Contacts App.<br>
 
 ## Road-Map
