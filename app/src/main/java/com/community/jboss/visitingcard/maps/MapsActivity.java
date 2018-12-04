@@ -1,17 +1,14 @@
-package com.community.jboss.visitingcard.Maps;
+package com.community.jboss.visitingcard.maps;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.community.jboss.visitingcard.R;
-import com.community.jboss.visitingcard.VisitingCard.ViewVisitingCard;
-import com.community.jboss.visitingcard.VisitingCard.VisitingCardActivity;
+import com.community.jboss.visitingcard.visitingcard.ViewVisitingCard;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
