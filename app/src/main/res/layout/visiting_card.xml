@@ -5,14 +5,10 @@
     xmlns:tools="http://schemas.android.c1om/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-=======
-    tools:context=".visitingcard.VisitingCardActivity">
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140
-    tools:context=".VisitingCard.VisitingCardActivity"
     android:gravity="center"
     android:orientation="vertical"
-    android:weightSum="100">
+    android:weightSum="100"
+    tools:context=".visitingcard.VisitingCardActivity">
 
     <!--
       TODO: Add profileImage - ImageView ; {Name, Email, PhoneNumber, Github, LinkedIn & Twitter Fields} - EditText

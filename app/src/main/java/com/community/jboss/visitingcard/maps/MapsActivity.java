@@ -1,18 +1,9 @@
 package com.community.jboss.visitingcard.maps;
 
 import android.content.Intent;
-<<<<<<< HEAD:app/src/main/java/com/community/jboss/visitingcard/maps/MapsActivity.java
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.FragmentActivity;
-=======
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.v4.app.FragmentActivity;
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140:app/src/main/java/com/community/jboss/visitingcard/maps/MapsActivity.java
 import android.view.View;
 import android.widget.TextView;
 
@@ -70,7 +61,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .setIcon(
                         BitmapDescriptorFactory.fromResource(R.drawable.custom_pin)
                 );
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
