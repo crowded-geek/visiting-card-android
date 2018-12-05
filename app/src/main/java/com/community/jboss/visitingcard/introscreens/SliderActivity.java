@@ -80,20 +80,7 @@ public class SliderActivity extends AppCompatActivity {
 
         //TODO: The Slider should appear only on when the app is launched for the first time. - Add appropriate conditions for that.
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Proceed to Login", Snackbar.LENGTH_LONG)
-                        .setAction("Yes", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent toLogin = new Intent(SliderActivity.this, LoginActivity.class);
-                                startActivity(toLogin);
-                            }
-                        }).show();
-            }
-        });
+
 
         // TODO: Create Introduction slides explaining all the functionalities of the app here.
 

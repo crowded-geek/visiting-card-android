@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/organisation_holder"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E0E0E0"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/jboss_logo" />
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/version_card_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="#6D4C41"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="4dp"
+                card_view:cardMaxElevation="6dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:contentPadding="15dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="VERSION 1.0"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/jboss_card_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="#0077ff"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="4dp"
+                card_view:cardMaxElevation="6dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:contentPadding="15dp">
+
+                <android.support.v7.widget.AppCompatTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/jboss_title"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/jbossdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoSizeMinTextSize="20sp"
+            android:padding="5dp"
+            android:text="@string/jboss_description"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            card_view:cardBackgroundColor="#424242"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="4dp"
+            card_view:cardMaxElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="10dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_rights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Get in touch with us through ...."
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </android.support.design.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="6dp"
+
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="15dp">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/github_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_github" />
+            </android.support.design.card.MaterialCardView>
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/gitterbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_gitter" />
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/facebook_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_facebook" />
+            </android.support.design.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/twitter_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_twitter" />
+            </android.support.design.card.MaterialCardView>
+
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/wikipedia_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_wiki" />
+            </android.support.design.card.MaterialCardView>
+
+            <android.support.design.card.MaterialCardView
+                android:id="@+id/linkedin_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                card_view:cardCornerRadius="35dp"
+                card_view:cardElevation="10dp"
+                card_view:cardMaxElevation="15dp"
+                card_view:contentPadding="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_linkedin" />
+            </android.support.design.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

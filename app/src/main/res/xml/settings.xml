@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference android:key="toggle_theme"
-        android:title="Toggle theme"
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="toggle_theme"
         android:summary="Enable dark theme in the app"
-        android:defaultValue="false"/>
+        android:title="Toggle theme" />
     <PreferenceCategory android:title="Your visit card information">
-        <EditTextPreference android:title="Name"
-            android:key="card_name"
-            android:singleLine="true"
-            android:maxLines="1"
+        <EditTextPreference
             android:capitalize="words"
-            android:inputType="textCapWords"/>
-        <EditTextPreference android:title="Date of birth"
+            android:inputType="textCapWords"
+            android:key="card_name"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="Name" />
+        <EditTextPreference
+            android:inputType="date"
             android:key="card_birth"
-            android:singleLine="true"
             android:maxLines="1"
-            android:inputType="date"/>
-        <EditTextPreference android:title="Email address"
+            android:singleLine="true"
+            android:title="Date of birth" />
+        <EditTextPreference
+            android:inputType="textWebEmailAddress"
             android:key="card_email"
-            android:singleLine="true"
             android:maxLines="1"
-            android:inputType="textWebEmailAddress"/>
-        <EditTextPreference android:title="Phone number"
+            android:singleLine="true"
+            android:title="Email address" />
+        <EditTextPreference
+            android:inputType="phone"
             android:key="card_phone"
-            android:singleLine="true"
             android:maxLines="1"
-            android:inputType="phone"/>
-        <EditTextPreference android:title="Postal address"
+            android:singleLine="true"
+            android:title="Phone number" />
+        <EditTextPreference
+            android:inputType="textPostalAddress"
             android:key="card_address"
             android:maxLines="2"
-            android:inputType="textPostalAddress"/>
+            android:title="Postal address" />
     </PreferenceCategory>
 </PreferenceScreen>
