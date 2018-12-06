@@ -11,8 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
-import com.community.jboss.visitingcard.introscreens.SliderActivity;
-import com.community.jboss.visitingcard.visitingcard.VisitingCardActivity;
+import com.community.jboss.visitingcard.IntroScreens.SliderActivity;
+import com.community.jboss.visitingcard.VisitingCard.VisitingCardActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

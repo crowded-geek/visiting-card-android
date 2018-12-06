@@ -1,4 +1,4 @@
-package com.community.jboss.visitingcard.visitingcard;
+package com.community.jboss.visitingcard.VisitingCard;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
