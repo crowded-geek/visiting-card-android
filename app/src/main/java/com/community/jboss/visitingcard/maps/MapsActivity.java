@@ -1,4 +1,4 @@
-package com.community.jboss.visitingcard.maps;
+package com.community.jboss.visitingcard.Maps;
 
 import android.content.Intent;
 import android.support.design.widget.BottomSheetBehavior;

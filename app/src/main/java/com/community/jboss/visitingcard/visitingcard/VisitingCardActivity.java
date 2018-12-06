@@ -19,17 +19,13 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.community.jboss.visitingcard.about.AboutActivity;
-import com.community.jboss.visitingcard.maps.MapsActivity;
+import com.community.jboss.visitingcard.Maps.MapsActivity;
 import com.community.jboss.visitingcard.R;
 import com.community.jboss.visitingcard.SettingsActivity;
 
 
 
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
-import com.community.jboss.visitingcard.R;
-import com.community.jboss.visitingcard.SettingsActivity;
-import com.community.jboss.visitingcard.maps.MapsActivity;
 import java.io.IOException;
 import siclo.com.ezphotopicker.api.EZPhotoPick;
 import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
