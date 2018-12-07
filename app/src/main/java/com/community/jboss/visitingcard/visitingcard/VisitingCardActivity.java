@@ -1,32 +1,19 @@
 package com.community.jboss.visitingcard.visitingcard;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140
+import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD
-=======
 
-import com.community.jboss.visitingcard.maps.MapsActivity;
-import com.community.jboss.visitingcard.R;
-import com.community.jboss.visitingcard.SettingsActivity;
-
-public class VisitingCardActivity extends AppCompatActivity {
-
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import com.community.jboss.visitingcard.R;
@@ -43,6 +30,7 @@ public class VisitingCardActivity extends AppCompatActivity {
 
     private ImageButton profile_img;
 
+    public static final String PREF_DARK_THEME = "dark_theme";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +95,25 @@ public class VisitingCardActivity extends AppCompatActivity {
                 Intent intent = new Intent(VisitingCardActivity.this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.about:
+                Intent aboutIntent = new Intent(VisitingCardActivity.this, AboutActivity.class);
+                startActivity(aboutIntent);
+                return true;
+            case R.id.darktheme:
+                SharedPreferences preferences = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                boolean useDarkTheme = preferences.getBoolean(AboutActivity.PREF_DARK_THEME, false);
+                if(!useDarkTheme)
+                {
+                    SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+                    editor.putBoolean(PREF_DARK_THEME, true);
+                    editor.apply();
+                }
+                else {SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+                    editor.putBoolean(PREF_DARK_THEME, false);
+                    editor.apply();}
+                Intent restarter = getIntent();
+                finish();
+                startActivity(restarter);
             default:
                 return super.onOptionsItemSelected(item);
         }
