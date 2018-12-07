@@ -79,7 +79,6 @@ public class SliderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_slider);
 
         //TODO: The Slider should appear only on when the app is launched for the first time. - Add appropriate conditions for that.
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
