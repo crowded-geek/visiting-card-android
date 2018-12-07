@@ -18,6 +18,7 @@ import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import com.community.jboss.visitingcard.R;
 import com.community.jboss.visitingcard.SettingsActivity;
+import com.community.jboss.visitingcard.about.AboutActivity;
 import com.community.jboss.visitingcard.maps.MapsActivity;
 import java.io.IOException;
 import siclo.com.ezphotopicker.api.EZPhotoPick;
@@ -101,7 +102,7 @@ public class VisitingCardActivity extends AppCompatActivity {
                 return true;
             case R.id.darktheme:
                 SharedPreferences preferences = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                boolean useDarkTheme = preferences.getBoolean(AboutActivity.PREF_DARK_THEME, false);
+                boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME, false);
                 if(!useDarkTheme)
                 {
                     SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();

@@ -20,6 +20,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -63,6 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         LatLng sydney = new LatLng(-34, 151);
+        mMap.addCircle(new CircleOptions().center(sydney).radius(3280).fillColor(getResources().getColor(R.color.colorAccent)));
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"))
                 .setIcon(
                         BitmapDescriptorFactory.fromResource(R.drawable.custom_pin)
