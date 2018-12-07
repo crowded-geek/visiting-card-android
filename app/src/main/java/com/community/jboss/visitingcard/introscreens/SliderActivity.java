@@ -1,14 +1,11 @@
 package com.community.jboss.visitingcard.introscreens;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -80,8 +77,6 @@ public class SliderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slider);
-<<<<<<< HEAD
-=======
 
         //TODO: The Slider should appear only on when the app is launched for the first time. - Add appropriate conditions for that.
 
@@ -104,7 +99,6 @@ public class SliderActivity extends AppCompatActivity {
 
         // TODO: if you're creating an Adapter for the ViewPager create it in the same Package and name it as SlideAdapter
 
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140
         Log.d(TAG, "Opening Slider");
 
         // TODO: Create Introduction slides explaining all the functionality of the app here.

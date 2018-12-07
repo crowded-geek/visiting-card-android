@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/about_header_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:src="@drawable/high_res_icon" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/app_name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/app_name"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.CardView
+
+                    android:id="@+id/version_card_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    card_view:cardBackgroundColor="#6D4C41"
+                    card_view:cardCornerRadius="20dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="10dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="VERSION 1.0"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="6dp">
+
+                    <android.support.design.card.MaterialCardView
+                        android:id="@+id/licensebutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="#7CB342"
+                        card_view:cardCornerRadius="20dp"
+                        card_view:cardElevation="4dp"
+                        card_view:cardMaxElevation="6dp"
+                        card_view:cardUseCompatPadding="true"
+                        card_view:contentPadding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/license_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/round_copyright_black_48" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/license_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:padding="2dp"
+                                android:text="@string/tv_license"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.design.card.MaterialCardView>
+
+
+                    <android.support.design.card.MaterialCardView
+                        android:id="@+id/contributorbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardBackgroundColor="#FF8F00"
+                        card_view:cardCornerRadius="20dp"
+                        card_view:cardElevation="4dp"
+                        card_view:cardMaxElevation="6dp"
+                        card_view:contentPadding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/contributor_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/round_group_black_48" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/contributor_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:padding="2dp"
+                                android:text="@string/tv_contributors"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.design.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <android.support.design.card.MaterialCardView
+                    android:id="@+id/jbossbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1.5"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardBackgroundColor="#0077ff"
+                    card_view:cardCornerRadius="35dp"
+                    card_view:cardElevation="25dp"
+                    card_view:cardMaxElevation="15dp"
+                    card_view:contentPadding="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:srcCompat="@drawable/jboss_small" />
+                </android.support.design.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+
+                    android:layout_marginRight="6dp">
+
+                    <android.support.design.card.MaterialCardView
+                        android:id="@+id/librariesbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="#039BE5"
+                        card_view:cardCornerRadius="20dp"
+                        card_view:cardElevation="4dp"
+                        card_view:cardMaxElevation="6dp"
+                        card_view:cardUseCompatPadding="true"
+                        card_view:contentPadding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/libraries_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/round_book_black_48" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/library_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:autoSizeTextType="uniform"
+                                android:padding="2dp"
+                                android:text="@string/tv_libraries"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.design.card.MaterialCardView>
+
+
+                    <android.support.design.card.MaterialCardView
+                        android:id="@+id/contact_us_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="#EF5350"
+                        card_view:cardCornerRadius="20dp"
+                        card_view:cardElevation="4dp"
+                        card_view:cardMaxElevation="6dp"
+                        card_view:cardUseCompatPadding="true"
+                        card_view:contentPadding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/contactus_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/round_forum_black_48" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/contactus_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:autoSizeTextType="uniform"
+                                android:padding="2dp"
+                                android:text="@string/tv_contactus"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.design.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    card_view:cardBackgroundColor="#424242"
+                    card_view:cardCornerRadius="20dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="10dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_rights"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="ALL RIGHTS RESERVED @2018"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

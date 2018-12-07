@@ -3,4 +3,8 @@
     <color name="colorPrimary">#e60000</color>
     <color name="colorPrimaryDark">#b30000</color>
     <color name="colorAccent"> #ffd633</color>
+    <color name="darkcardcolour">#212121</color>
+    <color name="darkColorPrimary">#04bcf4</color>
+    <color name="darkColorPrimaryDark">#153f87</color>
+    <color name="darkColorAccent">#FF4081</color>
 </resources>

@@ -1,11 +1,9 @@
 package com.community.jboss.visitingcard.visitingcard;
 
-<<<<<<< HEAD:app/src/main/java/com/community/jboss/visitingcard/visitingcard/ViewVisitingCard.java
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-=======
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,9 +12,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
->>>>>>> 2941db23b5681b14a670cb6b23efe3427a8a0140:app/src/main/java/com/community/jboss/visitingcard/visitingcard/ViewVisitingCard.java
-import android.view.View;
-
 import com.community.jboss.visitingcard.R;
 
 public class ViewVisitingCard extends AppCompatActivity {
