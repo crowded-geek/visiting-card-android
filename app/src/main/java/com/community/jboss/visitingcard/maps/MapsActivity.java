@@ -75,12 +75,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
         LatLng sydney = new LatLng(-34, 151);
         mMap.addCircle(new CircleOptions().center(sydney).radius(3280).fillColor(getResources().getColor(R.color.colorAccent)));
+
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"))
                 .setIcon(
                         BitmapDescriptorFactory.fromResource(R.drawable.custom_pin)
                 );
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
-
 }

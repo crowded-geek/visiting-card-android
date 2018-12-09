@@ -26,6 +26,7 @@ import static com.community.jboss.visitingcard.utils.Constants.userPhotoUrl;
 import static com.community.jboss.visitingcard.utils.Constants.userName;
 import static com.community.jboss.visitingcard.utils.Constants.userEmail;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     private final String PREFERENCES_NAME = "SharedPreferences";
@@ -76,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             Intent toVisitingCard = new Intent(LoginActivity.this, VisitingCardActivity.class);
             startActivity(toVisitingCard);
         }
+
 
         // TODO: Perform Firebase Authentication using Email Auth or Google Sign-in.
 
