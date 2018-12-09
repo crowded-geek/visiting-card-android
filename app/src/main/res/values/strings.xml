@@ -21,5 +21,6 @@
     <string name="linkedin_url">https://in.linkedin.com/company/jboss</string>
     <string name="about">About</string>
     <string name="dark_theme">Toggle Theme</string>
+    <string name="profile">Profile</string>
 
 </resources>

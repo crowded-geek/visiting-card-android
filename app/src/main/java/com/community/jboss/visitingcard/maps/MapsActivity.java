@@ -4,17 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.FragmentActivity;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.community.jboss.visitingcard.ProfileActivity;
 import com.community.jboss.visitingcard.R;
+import com.community.jboss.visitingcard.about.AboutActivity;
 import com.community.jboss.visitingcard.visitingcard.ViewVisitingCard;
+import com.community.jboss.visitingcard.visitingcard.VisitingCardActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -24,7 +26,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -44,11 +46,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         list_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toVisitingCardView = new Intent(MapsActivity.this, ViewVisitingCard.class);
+                Intent toVisitingCardView = new Intent(MapsActivity.this, ProfileActivity.class);
                 startActivity(toVisitingCardView);
             }
         });
 
+        Button profile = findViewById(R.id.btn_profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profileIntent = new Intent(MapsActivity.this, VisitingCardActivity.class);
+                startActivity(profileIntent);
+            }
+        });
         //TODO: Create Custom pins for the selected location
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -72,4 +82,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
+
 }

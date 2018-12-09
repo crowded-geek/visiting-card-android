@@ -13,11 +13,24 @@ import android.view.View;
 
 import com.community.jboss.visitingcard.introscreens.SliderActivity;
 import com.community.jboss.visitingcard.visitingcard.VisitingCardActivity;
+import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+
+import static com.community.jboss.visitingcard.utils.Constants.currentUser;
+import static com.community.jboss.visitingcard.utils.Constants.storage;
+import static com.community.jboss.visitingcard.utils.Constants.currentDatabase;
+import static com.community.jboss.visitingcard.utils.Constants.storageReference;
+import static com.community.jboss.visitingcard.utils.Constants.userPhotoUrl;
+import static com.community.jboss.visitingcard.utils.Constants.userName;
+import static com.community.jboss.visitingcard.utils.Constants.userEmail;
 
 public class LoginActivity extends AppCompatActivity {
 
     private final String PREFERENCES_NAME = "SharedPreferences";
     private final String TAG = "LoginActivity";
+    private static final int RC_SIGN_IN = 23602;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,26 +57,30 @@ public class LoginActivity extends AppCompatActivity {
 
             finish();
         }
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        // Choose authentication providers
+        if(firebaseAuth.getCurrentUser()==null) {
+            // Create and launch sign-in intent
+            startActivityForResult(AuthUI.getInstance().
+                    createSignInIntentBuilder().
+                    setIsSmartLockEnabled(true).
+                    build(), RC_SIGN_IN);
+        } else {
+            currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            currentDatabase = FirebaseDatabase.getInstance();
+            userName = currentUser.getDisplayName();
+            userEmail = currentUser.getEmail();
+            userPhotoUrl = currentUser.getPhotoUrl();
+            storage = FirebaseStorage.getInstance();
+            storageReference = storage.getReference();
+            Intent toVisitingCard = new Intent(LoginActivity.this, VisitingCardActivity.class);
+            startActivity(toVisitingCard);
+        }
 
         // TODO: Perform Firebase Authentication using Email Auth or Google Sign-in.
 
         // TODO: Have a Sign-in with google Button.
 
         //TODO: Move the FAB to bottom Right and replace it's icon with a check icon
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Proceed to Visiting Card Layout", Snackbar.LENGTH_LONG)
-                        .setAction("Yes", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                // TODO: Go to next stage only when the User is Authenticated.
-                                Intent toVisitingCard = new Intent(LoginActivity.this, VisitingCardActivity.class);
-                                startActivity(toVisitingCard);
-                            }
-                        }).show();
-            }
-        });
     }
 }

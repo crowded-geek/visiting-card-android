@@ -46,6 +46,15 @@
       TODO: Replace the below TextView with a ListView containing VisitingCards in that GeoFenced Location.
     -->
 
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#5599ec"
+        android:text="Profile"
+        android:textColor="#fff" />
+
     <TextView
         android:id="@+id/list_item"
         android:layout_width="match_parent"
