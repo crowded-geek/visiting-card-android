@@ -1,49 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.community.jboss.visitingcard">
 
     <!--
         TODO: Change the Label of the Activities according to the Activity's context
         TODO: Change App Icon .i.e., ic_launcher
     -->
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-feature android:name="android.hardware.location.gps" />
-
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+  
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".VisitingCard.VisitingCardActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".IntroScreens.SliderActivity">
         <activity android:name=".visitingcard.VisitingCardActivity" />
         <activity android:name=".introscreens.SliderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".visitingcard.VisitingCardActivity" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-        <activity android:name=".introscreens.SliderActivity" />
-
-        <!-- TODO: Add Google Maps API key here -->
-
+        <!--             TODO: Add Google Maps API key here -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -52,33 +38,13 @@
             android:name=".maps.MapsActivity"
             android:label="@string/title_activity_maps"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-        <activity android:name=".visitingcard.ViewVisitingCard" />
-
         <activity android:name=".visitingcard.ViewVisitingCard" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
-
-        <!-- Launcher Activity -->
-
-        <activity android:name=".SplashScreenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-	
-	<provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
+            android:label="@string/title_activity_settings"></activity>
+        <activity
+            android:name=".about.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

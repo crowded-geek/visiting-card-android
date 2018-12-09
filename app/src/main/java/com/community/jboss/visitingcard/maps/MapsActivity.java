@@ -1,9 +1,6 @@
 package com.community.jboss.visitingcard.maps;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.v4.app.FragmentActivity;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
