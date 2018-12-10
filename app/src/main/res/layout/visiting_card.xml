@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.c1om/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".visitingcard.VisitingCardActivity"
+    tools:context=".ProfileActivity"
     android:gravity="center"
     android:orientation="vertical"
     android:weightSum="100">
@@ -22,15 +22,28 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:elevation="30dp"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="25dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+
+            android:background="@drawable/card_bg">
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/add_fav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:sparkbutton_activeImage="@drawable/baseline_done_white_36"
+                app:sparkbutton_inActiveImage="@drawable/baseline_bubble_chart_white_36"
+                app:sparkbutton_iconSize="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="8dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/card_bg"
                 android:weightSum="100">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -40,13 +53,14 @@
                     android:layout_marginRight="60dp"
                     android:layout_weight="25">
 
-                    <ImageButton
-                        android:id="@+id/profile_img"
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/profile_picture"
                         android:onClick="select_img"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/man"/>
                     <TextView
+                        android:id="@+id/tv_profile_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
@@ -76,6 +90,7 @@
                             android:src="@drawable/call"
                             android:padding="5dp"/>
                         <TextView
+                            android:id="@+id/tv_profile_phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
@@ -97,6 +112,7 @@
                             android:padding="5dp"
                             android:src="@drawable/mail"/>
                         <TextView
+                            android:id="@+id/tv_profile_mail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
@@ -130,6 +146,7 @@
                         android:src="@drawable/linkedin"
                         android:padding="5dp"/>
                     <TextView
+                        android:id="@+id/tv_profile_linkedin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -151,6 +168,7 @@
                         android:padding="5dp"
                         android:src="@drawable/twitter"/>
                     <TextView
+                        android:id="@+id/tv_profile_twitter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -173,6 +191,7 @@
                         android:padding="5dp"
                         android:src="@drawable/git"/>
                     <TextView
+                        android:id="@+id/tv_profile_github"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -189,7 +208,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_edit"
         android:layout_below="@+id/card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -200,7 +219,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:soundEffectsEnabled="true"
-        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:src="@drawable/round_edit_white_36"
         app:elevation="17dp"
         app:fabSize="normal"
         app:layout_anchor="@+id/include"

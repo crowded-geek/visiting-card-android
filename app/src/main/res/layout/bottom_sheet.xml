@@ -45,17 +45,44 @@
     <!--
       TODO: Replace the below TextView with a ListView containing VisitingCards in that GeoFenced Location.
     -->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_margin="8dp">
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5599ec"
+        android:text="Profile"
+        android:textColor="#fff" />
 
-    <TextView
-        android:id="@+id/list_item"
+    <Button
+        android:id="@+id/btn_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5599ec"
+        android:text="Favorites"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btn_saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="#5599ec"
+        android:text="Saved"
+        android:textColor="#fff" />
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/list_near_cards"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:padding="8dp"
-        android:text="Add List View here"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="20sp" />
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </LinearLayout>
