@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.c1om/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".visitingcard.VisitingCardActivity">
-    tools:context=".VisitingCard.VisitingCardActivity"
+    tools:context=".visitingcard.VisitingCardActivity"
     android:gravity="center"
     android:orientation="vertical"
     android:weightSum="100">
