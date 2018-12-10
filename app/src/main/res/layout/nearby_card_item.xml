@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/li_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:id="@+id/li_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="crowded.geek"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/li_image"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:id="@+id/li_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/li_name"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/li_image"
+        android:layout_marginLeft="8dp"
+        android:text="whatever@whatever.com"
+        android:textSize="12sp"/>
+    <Button
+        android:id="@+id/li_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ed00"
+        android:layout_alignParentRight="true"
+        android:text="SAVE"
+        android:textColor="#fff"
+        android:layout_margin="8dp"/>
+</RelativeLayout>
