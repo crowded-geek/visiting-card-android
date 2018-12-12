@@ -1,4 +1,4 @@
-package com.community.jboss.visitingcard.IntroScreens;
+package com.community.jboss.visitingcard.introscreens;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
