@@ -43,7 +43,7 @@ public class VisitingCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.visiting_card);
 
-	profile_img=findViewById(R.id.profile_img);
+    profile_img=findViewById(R.id.profile_img);
 
         // TODO: Add a ImageView and a number of EditText to get his/her Visiting Card details (Currently authenticated User)
 
