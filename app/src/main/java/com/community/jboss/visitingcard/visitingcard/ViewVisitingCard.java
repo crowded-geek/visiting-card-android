@@ -1,4 +1,4 @@
-package com.community.jboss.visitingcard.visitingcard;
+package com.community.jboss.visitingcard.VisitingCard;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;

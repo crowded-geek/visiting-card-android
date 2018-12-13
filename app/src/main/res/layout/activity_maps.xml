@@ -2,7 +2,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <!--
     TODO: Ensure functionality after updating the Google Maps API Key
@@ -12,8 +13,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".maps.MapsActivity" />
-
+        tools:context=".Maps.MapsActivity" />
     <!--
     TODO: Add a drop FAB to drop the user's visiting card in the currently location (To the cloud using POST method)
     -->
